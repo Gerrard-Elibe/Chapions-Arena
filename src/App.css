@@ -758,6 +758,30 @@ body::after {
 /* ======================
    RESULTS V2
 ====================== */
+
+.walkover-text {
+  margin-top: 15px;
+  color: #ffd700;
+  font-weight: 600;
+  text-align: center;
+}
+
+.result-status {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: rgba(255, 215, 0, 0.15);
+  color: #ffd700;
+  font-weight: 700;
+}
+
+.result-card small {
+  display: block;
+  margin-top: 18px;
+  text-align: center;
+  color: #b7c3d0;
+}
 .results-grid {
   display: grid;
   gap: 1.5rem;

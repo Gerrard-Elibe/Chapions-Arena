@@ -1,3 +1,65 @@
-// src/data/results.js
-
-export const results = [];
+export const results = [
+  {
+    id: 1,
+    player1: "Gerrard",
+    score1: 2,
+    score2: 1,
+    player2: "Samson",
+    status: "Completed",
+    day: "Tuesday",
+  },
+  {
+    id: 2,
+    player1: "Bright",
+    score1: 9,
+    score2: 2,
+    player2: "Sixtus",
+    status: "Completed",
+    day: "Tuesday",
+  },
+  {
+    id: 3,
+    player1: "Stoner",
+    score1: 1,
+    score2: 0,
+    player2: "Patrick",
+    status: "Completed",
+    day: "Wednesday",
+  },
+  {
+    id: 4,
+    player1: "Offorzor",
+    score1: 1,
+    score2: 10,
+    player2: "Mbamo",
+    status: "Completed",
+    day: "Wednesday",
+  },
+  {
+    id: 5,
+    player1: "Ezenwa",
+    score1: 2,
+    score2: 3,
+    player2: "Louis",
+    status: "Completed",
+    day: "Thursday",
+  },
+  {
+    id: 6,
+    player1: "Nathaniel",
+    score1: null,
+    score2: null,
+    player2: "Vincent",
+    status: "Walkover (3 pts awarded to Nathaniel)",
+    day: "Thursday",
+  },
+  {
+    id: 7,
+    player1: "Joseph",
+    score1: null,
+    score2: null,
+    player2: "Moses",
+    status: "Walkover (3 pts awarded to Moses)",
+    day: "Friday",
+  },
+];
