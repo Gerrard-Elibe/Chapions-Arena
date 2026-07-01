@@ -4,53 +4,66 @@ import { motion } from "framer-motion";
 const Results = () => {
   return (
     <section id="results" className="results-section">
-      <h2>📊 Matchday One Results</h2>
+      <h2>🏆 Match Results</h2>
 
-      <div className="results-grid">
-        {results.map((match, index) => (
-          <motion.div
-            key={match.id}
-            className="result-card"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.5,
-              delay: index * 0.1,
-            }}
-            viewport={{ once: true }}
-          >
-            <div className="result-status">
-              {match.status}
-            </div>
+      {results.length === 0 ? (
+        <motion.div
+          className="empty-results"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="empty-icon">⚽</div>
 
-            {match.score1 !== null ? (
+          <h3>No Results Yet</h3>
+
+          <p>
+            Season One begins on Thursday.
+            <br />
+            Match results will appear here after every game.
+          </p>
+        </motion.div>
+      ) : (
+        <div className="results-grid">
+          {results.map((match, index) => (
+            <motion.div
+              key={match.id}
+              className="result-card"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+              }}
+              viewport={{ once: true }}
+            >
+              <div className="result-status">
+                🏆 Matchday {match.matchday}
+              </div>
+
               <h3>
-                <span>{match.player1}</span>
+                {match.player1}
 
                 <span className="score">
                   {match.score1} - {match.score2}
                 </span>
 
-                <span>{match.player2}</span>
+                {match.player2}
               </h3>
-            ) : (
-              <>
-                <h3>
-                  {match.player1}
-                  <span className="score">vs</span>
-                  {match.player2}
-                </h3>
 
-                <p className="walkover-text">
-                  Match not played. Walkover awarded.
-                </p>
-              </>
-            )}
-
-            <small>{match.day}</small>
-          </motion.div>
-        ))}
-      </div>
+              <p
+                style={{
+                  marginTop: "1rem",
+                  textAlign: "center",
+                  color: "#b7c3d0",
+                }}
+              >
+                {match.day}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      )}
     </section>
   );
 };

@@ -8,9 +8,7 @@ import offorzor from "../assets/players/offorzor.jpg";
 import mbamo from "../assets/players/mbamo.jpg";
 import ezenwa from "../assets/players/ezenwa.jpg";
 import louis from "../assets/players/louis.jpg";
-import nathaniel from "../assets/players/nathaniel.jpg";
-import vincent from "../assets/players/vincent.jpg";
-import joseph from "../assets/players/joseph.jpg";
+import eman from "../assets/players/eman.jpg";
 import moses from "../assets/players/moses.jpg";
 
 
@@ -75,26 +73,14 @@ export const players = [
     tag: "Ghost Mode",
     image: louis,
   },
-  {
-    id: 11,
-    name: "Nathaniel",
-    tag: "Apex",
-    image: nathaniel,
-  },
-  {
-  id: 12,
-  name: "Vincent",
-  tag: "The Gladiator",
-  image: vincent,
+{
+  id: 11,
+  name: "Eman",
+  tag: "The Emperor",
+  image: eman,
 },
 {
-  id: 13,
-  name: "Joseph",
-  tag: "The Destroyer",
-  image: joseph,
-},
-{
-  id:14,
+  id:12,
   name: "Moses",
   tag: "The Prophet",
   image: moses,

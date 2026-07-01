@@ -6,88 +6,91 @@ const Fixtures = () => {
   const getPlayer = (name) =>
     players.find((player) => player.name === name);
 
-  // Group fixtures by Matchweek
-  const groupedWeeks = fixtures.reduce((acc, fixture) => {
-    if (!acc[fixture.week]) {
-      acc[fixture.week] = [];
+  const groupedFixtures = fixtures.reduce((acc, fixture) => {
+    if (!acc[fixture.matchday]) {
+      acc[fixture.matchday] = {};
     }
 
-    acc[fixture.week].push(fixture);
+    if (!acc[fixture.matchday][fixture.day]) {
+      acc[fixture.matchday][fixture.day] = [];
+    }
+
+    acc[fixture.matchday][fixture.day].push(fixture);
 
     return acc;
   }, {});
 
   return (
     <section id="fixtures" className="fixtures-section">
-      <h2>⚔️ Upcoming Fixtures</h2>
+      <h2>⚔️ League Fixtures</h2>
 
-      {Object.entries(groupedWeeks).map(([week, weekFixtures]) => (
-        <div key={week} className="fixture-week">
-          <h2 className="fixture-week-title">
-            Matchweek {week}
-          </h2>
+      {Object.entries(groupedFixtures).map(([matchday, days]) => (
+        <div key={matchday} className="fixture-day">
 
-          {["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].map(
-            (day) => {
-              const dayFixtures = weekFixtures.filter(
-                (fixture) => fixture.day === day
-              );
+          <h3 className="fixture-day-title">
+            🏆 Matchday {matchday}
+          </h3>
 
-              if (!dayFixtures.length) return null;
+          {Object.entries(days).map(([day, matches]) => (
+            <div key={day}>
 
-              return (
-                <div key={day} className="fixture-day">
-                  <h3 className="fixture-day-title">{day}</h3>
+              <h4
+                style={{
+                  textAlign: "center",
+                  margin: "2rem 0 1rem",
+                  color: "#00a8ff",
+                }}
+              >
+                {day}
+              </h4>
 
-                  <div className="fixtures-grid">
-                    {dayFixtures.map((match, index) => {
-                      const player1 = getPlayer(match.player1);
-                      const player2 = getPlayer(match.player2);
+              <div className="fixtures-grid">
+                {matches.map((match, index) => {
+                  const player1 = getPlayer(match.player1);
+                  const player2 = getPlayer(match.player2);
 
-                      return (
-                        <motion.div
-                          key={match.id}
-                          className="fixture-card"
-                          initial={{ opacity: 0, y: 50 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          transition={{
-                            duration: 0.5,
-                            delay: index * 0.1,
-                          }}
-                          viewport={{ once: true }}
-                        >
-                          <div className="fixture-player">
-                            <img
-                              src={player1.image}
-                              alt={player1.name}
-                            />
-                            <h3>{player1.name}</h3>
-                          </div>
+                  return (
+                    <motion.div
+                      key={match.id}
+                      className="fixture-card"
+                      initial={{ opacity: 0, y: 50 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{
+                        duration: 0.5,
+                        delay: index * 0.1,
+                      }}
+                      viewport={{ once: true }}
+                    >
+                      <div className="fixture-player">
+                        <img
+                          src={player1.image}
+                          alt={player1.name}
+                        />
+                        <h3>{player1.name}</h3>
+                      </div>
 
-                          <div className="fixture-vs">
-                            <span>VS</span>
-                            <small>⚔ Battle</small>
-                          </div>
+                      <div className="fixture-vs">
+                        <span>VS</span>
+                        <small>⚔️ Battle</small>
+                      </div>
 
-                          <div className="fixture-player">
-                            <img
-                              src={player2.image}
-                              alt={player2.name}
-                            />
-                            <h3>{player2.name}</h3>
-                          </div>
+                      <div className="fixture-player">
+                        <img
+                          src={player2.image}
+                          alt={player2.name}
+                        />
+                        <h3>{player2.name}</h3>
+                      </div>
 
-                          <div className="fixture-status">
-                            {match.status}
-                          </div>
-                        </motion.div>
-                      );
-                    })}
-                  </div>
-                </div>
-              );
-            }
-          )}
+                      <div className="fixture-status">
+                        {match.status}
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
         </div>
       ))}
     </section>
