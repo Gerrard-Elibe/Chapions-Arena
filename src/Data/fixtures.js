@@ -40,7 +40,7 @@ export const fixtures = [
     matchday: 1,
     day: "Friday",
     player1: "Stoner",
-    player2: "Mbamo",
+    player2: "Emmanuel",
     status: "Upcoming",
   },
   {

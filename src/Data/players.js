@@ -57,7 +57,7 @@ export const players = [
   },
   {
     id: 8,
-    name: "Mbamo",
+    name: "Emmanuel",
     tag: "Titan",
     image: mbamo,
   },
