@@ -48,6 +48,7 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
       >
+        {/* Trophy */}
         <motion.div
           className="hero-trophy"
           variants={{
@@ -68,30 +69,35 @@ const Hero = () => {
           🏆
         </motion.div>
 
+        {/* Badge */}
         <motion.div
           className="hero-badge"
           variants={itemVariants}
         >
-          ⚡ Champions Arena • Season One
+          ⚽ Champions Arena • Season One
         </motion.div>
 
+        {/* Title */}
         <motion.h1 variants={titleVariants}>
           CHAMPIONS
           <span> ARENA</span>
         </motion.h1>
 
+        {/* Subtitle */}
         <motion.h3 variants={itemVariants}>
-          OFFICIAL LEAGUE
+          MATCHWEEK 2 • LEAGUE IN PROGRESS
         </motion.h3>
 
+        {/* Description */}
         <motion.p variants={itemVariants}>
-          12 Competitors • 22 Matchweeks
+          The race for the title has begun.
           <br />
-          Every Player Battles Home & Away.
+          12 Players • Double Round Robin League
           <br />
-          One Champion. Eternal Glory.
+          Every Match Counts.
         </motion.p>
 
+        {/* Stats */}
         <motion.div
           className="hero-stats"
           variants={itemVariants}
@@ -99,11 +105,6 @@ const Hero = () => {
           <div className="hero-stat">
             <h2>12</h2>
             <span>Players</span>
-          </div>
-
-          <div className="hero-stat">
-            <h2>6</h2>
-            <span>Matches / Week</span>
           </div>
 
           <div className="hero-stat">
@@ -115,8 +116,14 @@ const Hero = () => {
             <h2>132</h2>
             <span>Total Matches</span>
           </div>
+
+          <div className="hero-stat">
+            <h2>2</h2>
+            <span>Current Week</span>
+          </div>
         </motion.div>
 
+        {/* CTA */}
         <motion.div
           variants={itemVariants}
           style={{ display: "inline-block" }}
@@ -124,10 +131,13 @@ const Hero = () => {
           <motion.a
             href="#fixtures"
             className="hero-btn"
-            whileHover={{ scale: 1.08 }}
+            whileHover={{
+              scale: 1.08,
+              boxShadow: "0 0 25px rgba(0,168,255,.6)",
+            }}
             whileTap={{ scale: 0.95 }}
           >
-            VIEW FIXTURES ⚽
+            VIEW MATCHWEEK 2 ⚽
           </motion.a>
         </motion.div>
       </motion.div>
