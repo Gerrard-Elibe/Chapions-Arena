@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { league } from "../Data/league";
 
 const Hero = () => {
   const containerVariants = {
@@ -48,7 +49,6 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
       >
-        {/* Trophy */}
         <motion.div
           className="hero-trophy"
           variants={{
@@ -69,61 +69,55 @@ const Hero = () => {
           🏆
         </motion.div>
 
-        {/* Badge */}
         <motion.div
           className="hero-badge"
           variants={itemVariants}
         >
-          ⚽ Champions Arena • Season One
+          ⚽ {league.name} • Season {league.season}
         </motion.div>
 
-        {/* Title */}
         <motion.h1 variants={titleVariants}>
           CHAMPIONS
           <span> ARENA</span>
         </motion.h1>
 
-        {/* Subtitle */}
         <motion.h3 variants={itemVariants}>
-          MATCHWEEK 2 • LEAGUE IN PROGRESS
+          MATCHWEEK {league.currentWeek} • LEAGUE IN PROGRESS
         </motion.h3>
 
-        {/* Description */}
         <motion.p variants={itemVariants}>
-          The race for the title has begun.
+          The race for the championship continues.
           <br />
-          12 Players • Double Round Robin League
+          {league.players} Elite Players • Double Round Robin League
           <br />
-          Every Match Counts.
+          Every Goal. Every Point. Every Match Matters.
         </motion.p>
 
-        {/* Stats */}
         <motion.div
           className="hero-stats"
           variants={itemVariants}
         >
           <div className="hero-stat">
-            <h2>12</h2>
+            <h2>{league.players}</h2>
             <span>Players</span>
           </div>
 
           <div className="hero-stat">
-            <h2>22</h2>
+            <h2>{league.totalWeeks}</h2>
             <span>Matchweeks</span>
           </div>
 
           <div className="hero-stat">
-            <h2>132</h2>
+            <h2>{league.totalMatches}</h2>
             <span>Total Matches</span>
           </div>
 
           <div className="hero-stat">
-            <h2>2</h2>
+            <h2>{league.currentWeek}</h2>
             <span>Current Week</span>
           </div>
         </motion.div>
 
-        {/* CTA */}
         <motion.div
           variants={itemVariants}
           style={{ display: "inline-block" }}
@@ -137,14 +131,12 @@ const Hero = () => {
             }}
             whileTap={{ scale: 0.95 }}
           >
-            VIEW MATCHWEEK 2 ⚽
+            VIEW MATCHWEEK {league.currentWeek} ⚽
           </motion.a>
         </motion.div>
       </motion.div>
 
-      <div className="scroll-down">
-        ↓
-      </div>
+      <div className="scroll-down">↓</div>
     </section>
   );
 };

@@ -700,40 +700,36 @@ body::after {
   color: #ffd700;
 }
 
-.fixture-status {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  padding: 6px 16px;
-  border-radius: 50px;
-  font-size: .8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.fixture-status{
+  position:absolute;
+  top:15px;
+  right:15px;
+  padding:8px 16px;
+  border-radius:50px;
+  font-size:.85rem;
+  font-weight:700;
 }
 
-.status-upcoming {
-  background: rgba(255, 255, 255, 0.1);
-  color: #b7c3d0;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+.fixture-status.upcoming{
+  background:rgba(255,215,0,.15);
+  color:#ffd700;
 }
 
-.status-live {
-  background: rgba(255, 79, 216, 0.2);
-  color: #ff4fd8;
-  border: 1px solid rgba(255, 79, 216, 0.4);
-  animation: pulseGlow 2s infinite ease-in-out;
+.fixture-status.completed{
+  background:rgba(46,204,113,.15);
+  color:#2ecc71;
 }
 
-.status-completed {
-  background: rgba(0, 168, 255, 0.15);
-  color: #00a8ff;
-  border: 1px solid rgba(0, 168, 255, 0.3);
+.fixture-status.live{
+  background:rgba(255,77,77,.15);
+  color:#ff4d4d;
+  animation:pulse 1.5s infinite;
 }
 
-@keyframes pulseGlow {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
+@keyframes pulse{
+  50%{
+    transform:scale(1.08);
+  }
 }
 
 @media (max-width: 768px) {

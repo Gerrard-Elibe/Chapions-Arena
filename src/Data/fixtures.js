@@ -1,6 +1,6 @@
 export const fixtures = [
   // =========================
-  // MATCHDAY 2
+  // MATCHDAY 2 (COMPLETED)
   // =========================
 
   {
@@ -9,7 +9,7 @@ export const fixtures = [
     day: "Monday",
     player1: "Gerrard",
     player2: "Samson",
-    status: "Upcoming",
+    status: "Completed ✅",
   },
   {
     id: 8,
@@ -17,7 +17,7 @@ export const fixtures = [
     day: "Monday",
     player1: "Bright",
     player2: "Patrick",
-    status: "Upcoming",
+    status: "Completed ✅",
   },
   {
     id: 9,
@@ -25,7 +25,7 @@ export const fixtures = [
     day: "Monday",
     player1: "Sixtus",
     player2: "Emmanuel",
-    status: "Upcoming",
+    status: "Completed ✅",
   },
   {
     id: 10,
@@ -33,7 +33,7 @@ export const fixtures = [
     day: "Tuesday",
     player1: "Stoner",
     player2: "Louis",
-    status: "Upcoming",
+    status: "Completed ✅",
   },
   {
     id: 11,
@@ -41,7 +41,7 @@ export const fixtures = [
     day: "Tuesday",
     player1: "Eman",
     player2: "Offorzor",
-    status: "Upcoming",
+    status: "Completed ✅",
   },
   {
     id: 12,
@@ -49,11 +49,11 @@ export const fixtures = [
     day: "Tuesday",
     player1: "Moses",
     player2: "Ezenwa",
-    status: "Upcoming",
+    status: "Completed ✅",
   },
 
   // =========================
-  // MATCHDAY 3
+  // MATCHDAY 3 (UPCOMING)
   // =========================
 
   {

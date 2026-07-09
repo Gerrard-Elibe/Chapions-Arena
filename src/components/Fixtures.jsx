@@ -8,16 +8,33 @@ const Fixtures = () => {
 
   const groupedFixtures = fixtures.reduce((acc, fixture) => {
     if (!acc[fixture.matchday]) acc[fixture.matchday] = {};
-    if (!acc[fixture.matchday][fixture.day])
+    if (!acc[fixture.matchday][fixture.day]) {
       acc[fixture.matchday][fixture.day] = [];
+    }
 
     acc[fixture.matchday][fixture.day].push(fixture);
     return acc;
   }, {});
 
+  const dayOrder = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+
+  const getStatusClass = (status) => {
+    if (status.includes("Completed")) return "completed";
+    if (status.includes("Live")) return "live";
+    return "upcoming";
+  };
+
   return (
     <section id="fixtures" className="fixtures-section">
-      <h2>⚔️ Upcoming League Fixtures</h2>
+      <h2>⚔️ League Fixtures</h2>
 
       {Object.keys(groupedFixtures)
         .sort((a, b) => Number(a) - Number(b))
@@ -27,8 +44,12 @@ const Fixtures = () => {
               🏆 Matchday {matchday}
             </h3>
 
-            {Object.entries(groupedFixtures[matchday]).map(
-              ([day, matches]) => (
+            {Object.entries(groupedFixtures[matchday])
+              .sort(
+                ([a], [b]) =>
+                  dayOrder.indexOf(a) - dayOrder.indexOf(b)
+              )
+              .map(([day, matches]) => (
                 <div key={day}>
                   <h4
                     style={{
@@ -37,7 +58,7 @@ const Fixtures = () => {
                       margin: "2rem 0 1rem",
                     }}
                   >
-                    {day}
+                    📅 {day}
                   </h4>
 
                   <div className="fixtures-grid">
@@ -51,7 +72,7 @@ const Fixtures = () => {
                         <motion.div
                           key={match.id}
                           className="fixture-card"
-                          initial={{ opacity: 0, y: 50 }}
+                          initial={{ opacity: 0, y: 40 }}
                           whileInView={{ opacity: 1, y: 0 }}
                           transition={{
                             duration: 0.5,
@@ -80,7 +101,11 @@ const Fixtures = () => {
                             <h3>{player2.name}</h3>
                           </div>
 
-                          <div className="fixture-status">
+                          <div
+                            className={`fixture-status ${getStatusClass(
+                              match.status
+                            )}`}
+                          >
                             {match.status}
                           </div>
                         </motion.div>
@@ -88,8 +113,7 @@ const Fixtures = () => {
                     })}
                   </div>
                 </div>
-              )
-            )}
+              ))}
           </div>
         ))}
     </section>
