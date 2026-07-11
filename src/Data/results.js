@@ -85,7 +85,6 @@ export const results = [
     player2: "Louis",
     score1: 1,
     score2: 0,
-    note: "Awarded Win (Forfeit)",
   },
   {
     id: 11,
@@ -94,7 +93,6 @@ export const results = [
     player2: "Offorzor",
     score1: 0,
     score2: 1,
-    note: "Awarded Win (Forfeit)",
   },
   {
     id: 12,
@@ -102,6 +100,58 @@ export const results = [
     player1: "Moses",
     player2: "Ezenwa",
     score1: 0,
+    score2: 1,
+  },
+
+  // =========================
+  // MATCHDAY 3
+  // =========================
+  {
+    id: 13,
+    matchday: 3,
+    player1: "Gerrard",
+    player2: "Bright",
+    score1: 2,
+    score2: 2,
+  },
+  {
+    id: 14,
+    matchday: 3,
+    player1: "Samson",
+    player2: "Stoner",
+    score1: 0,
+    score2: 5,
+  },
+  {
+    id: 15,
+    matchday: 3,
+    player1: "Patrick",
+    player2: "Moses",
+    score1: 1,
+    score2: 2,
+  },
+  {
+    id: 16,
+    matchday: 3,
+    player1: "Sixtus",
+    player2: "Eman",
+    score1: 0,
+    score2: 0,
+  },
+  {
+    id: 17,
+    matchday: 3,
+    player1: "Louis",
+    player2: "Emmanuel",
+    score1: 2,
+    score2: 1,
+  },
+  {
+    id: 18,
+    matchday: 3,
+    player1: "Ezenwa",
+    player2: "Offorzor",
+    score1: 2,
     score2: 1,
   },
 ];
