@@ -4,7 +4,7 @@ export const league = {
 
   players: 12,
 
-  currentWeek: 4,
+  currentWeek: 6,
   totalWeeks: 22,
 
   matchesPerWeek: 6,

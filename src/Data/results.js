@@ -1,157 +1,61 @@
-export const results = [
+export const results = {
   // =========================
   // MATCHDAY 1
   // =========================
-  {
-    id: 1,
-    matchday: 1,
-    player1: "Gerrard",
-    player2: "Moses",
-    score1: 0,
-    score2: 0,
-  },
-  {
-    id: 2,
-    matchday: 1,
-    player1: "Bright",
-    player2: "Louis",
-    score1: 3,
-    score2: 1,
-  },
-  {
-    id: 3,
-    matchday: 1,
-    player1: "Sixtus",
-    player2: "Ezenwa",
-    score1: 3,
-    score2: 0,
-  },
-  {
-    id: 4,
-    matchday: 1,
-    player1: "Stoner",
-    player2: "Emmanuel",
-    score1: 2,
-    score2: 3,
-  },
-  {
-    id: 5,
-    matchday: 1,
-    player1: "Patrick",
-    player2: "Offorzor",
-    score1: 7,
-    score2: 1,
-  },
-  {
-    id: 6,
-    matchday: 1,
-    player1: "Eman",
-    player2: "Samson",
-    score1: 4,
-    score2: 3,
-  },
+  1: [
+    ["Gerrard", "Moses", 0, 0],
+    ["Bright", "Louis", 3, 1],
+    ["Sixtus", "Ezenwa", 3, 0],
+    ["Stoner", "Emmanuel", 2, 3],
+    ["Patrick", "Offorzor", 7, 1],
+    ["Eman", "Samson", 4, 3],
+  ],
 
   // =========================
   // MATCHDAY 2
   // =========================
-  {
-    id: 7,
-    matchday: 2,
-    player1: "Gerrard",
-    player2: "Samson",
-    score1: 2,
-    score2: 2,
-  },
-  {
-    id: 8,
-    matchday: 2,
-    player1: "Bright",
-    player2: "Patrick",
-    score1: 2,
-    score2: 2,
-  },
-  {
-    id: 9,
-    matchday: 2,
-    player1: "Sixtus",
-    player2: "Emmanuel",
-    score1: 0,
-    score2: 2,
-  },
-  {
-    id: 10,
-    matchday: 2,
-    player1: "Stoner",
-    player2: "Louis",
-    score1: 1,
-    score2: 0,
-  },
-  {
-    id: 11,
-    matchday: 2,
-    player1: "Eman",
-    player2: "Offorzor",
-    score1: 0,
-    score2: 1,
-  },
-  {
-    id: 12,
-    matchday: 2,
-    player1: "Moses",
-    player2: "Ezenwa",
-    score1: 0,
-    score2: 1,
-  },
+  2: [
+    ["Gerrard", "Samson", 2, 2],
+    ["Bright", "Patrick", 2, 2],
+    ["Sixtus", "Emmanuel", 0, 2],
+    ["Stoner", "Louis", 1, 0],
+    ["Eman", "Offorzor", 0, 1],
+    ["Moses", "Ezenwa", 0, 1],
+  ],
 
   // =========================
   // MATCHDAY 3
   // =========================
-  {
-    id: 13,
-    matchday: 3,
-    player1: "Gerrard",
-    player2: "Bright",
-    score1: 2,
-    score2: 2,
-  },
-  {
-    id: 14,
-    matchday: 3,
-    player1: "Samson",
-    player2: "Stoner",
-    score1: 0,
-    score2: 5,
-  },
-  {
-    id: 15,
-    matchday: 3,
-    player1: "Patrick",
-    player2: "Moses",
-    score1: 1,
-    score2: 2,
-  },
-  {
-    id: 16,
-    matchday: 3,
-    player1: "Sixtus",
-    player2: "Eman",
-    score1: 0,
-    score2: 0,
-  },
-  {
-    id: 17,
-    matchday: 3,
-    player1: "Louis",
-    player2: "Emmanuel",
-    score1: 2,
-    score2: 1,
-  },
-  {
-    id: 18,
-    matchday: 3,
-    player1: "Ezenwa",
-    player2: "Offorzor",
-    score1: 2,
-    score2: 1,
-  },
-];
+  3: [
+    ["Gerrard", "Bright", 2, 2],
+    ["Samson", "Stoner", 0, 5],
+    ["Patrick", "Moses", 1, 2],
+    ["Sixtus", "Eman", 0, 0],
+    ["Louis", "Emmanuel", 2, 1],
+    ["Ezenwa", "Offorzor", 2, 1],
+  ],
+
+  // =========================
+  // MATCHDAY 4
+  // =========================
+  4: [
+    ["Moses", "Sixtus", 3, 0],
+    ["Offorzor", "Gerrard", 0, 5],
+    ["Patrick", "Stoner", 0, 5],
+    ["Ezenwa", "Eman", 1, 1],
+    ["Bright", "Emmanuel", 2, 2],
+    ["Louis", "Samson", 3, 3],
+  ],
+
+  // =========================
+  // MATCHDAY 5
+  // =========================
+  5: [
+    ["Eman", "Emmanuel", 5, 2],
+    ["Moses", "Offorzor", 5, 0],
+    ["Bright", "Ezenwa", 1, 6],
+    ["Stoner", "Gerrard", 4, 4],
+    ["Louis", "Sixtus", 5, 1],
+    ["Samson", "Patrick", 3, 2],
+  ],
+};

@@ -1,15 +1,23 @@
 import { players } from "../Data/players";
 import { results } from "../Data/results";
 import { calculateStandings } from "../utils/calculateStandings";
-import { FaUsers, FaFutbol, FaTrophy, FaFire } from "react-icons/fa";
+import {
+  FaUsers,
+  FaFutbol,
+  FaTrophy,
+  FaFire,
+} from "react-icons/fa";
 
 const Stats = () => {
   const standings = calculateStandings(players, results);
 
   const leader = standings[0];
 
-  const totalGoals = results.reduce(
-    (acc, match) => acc + match.score1 + match.score2,
+  // Flatten all matchdays into one array
+  const allMatches = Object.values(results).flat();
+
+  const totalGoals = allMatches.reduce(
+    (acc, [, , score1, score2]) => acc + score1 + score2,
     0
   );
 
@@ -18,7 +26,6 @@ const Stats = () => {
       <h2>📈 Tournament Stats</h2>
 
       <div className="stats-grid">
-
         <div className="stat-card">
           <FaUsers className="stat-icon" />
           <h3>{players.length}</h3>
@@ -27,7 +34,7 @@ const Stats = () => {
 
         <div className="stat-card">
           <FaFutbol className="stat-icon" />
-          <h3>{results.length}</h3>
+          <h3>{allMatches.length}</h3>
           <p>Matches Played</p>
         </div>
 
@@ -39,10 +46,9 @@ const Stats = () => {
 
         <div className="stat-card">
           <FaTrophy className="stat-icon" />
-          <h3>{leader.name}</h3>
+          <h3>{leader?.name ?? "-"}</h3>
           <p>Current King</p>
         </div>
-
       </div>
     </section>
   );

@@ -2,11 +2,13 @@ import { results } from "../Data/results";
 import { motion } from "framer-motion";
 
 const Results = () => {
+  const matchdays = Object.keys(results).sort((a, b) => a - b);
+
   return (
     <section id="results" className="results-section">
       <h2>🏆 Match Results</h2>
 
-      {results.length === 0 ? (
+      {matchdays.length === 0 ? (
         <motion.div
           className="empty-results"
           initial={{ opacity: 0 }}
@@ -24,45 +26,48 @@ const Results = () => {
           </p>
         </motion.div>
       ) : (
-        <div className="results-grid">
-          {results.map((match, index) => (
-            <motion.div
-              key={match.id}
-              className="result-card"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.1,
-              }}
-              viewport={{ once: true }}
-            >
-              <div className="result-status">
-                🏆 Matchday {match.matchday}
-              </div>
+        matchdays.map((matchday) => (
+          <div key={matchday} className="fixture-day">
 
-              <h3>
-                {match.player1}
+            <h3 className="fixture-day-title">
+              🏆 Matchday {matchday}
+            </h3>
 
-                <span className="score">
-                  {match.score1} - {match.score2}
-                </span>
+            <div className="results-grid">
+              {results[matchday].map((match, index) => {
+                const [player1, player2, score1, score2] = match;
 
-                {match.player2}
-              </h3>
+                return (
+                  <motion.div
+                    key={`${matchday}-${index}`}
+                    className="result-card"
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                      duration: 0.5,
+                      delay: index * 0.1,
+                    }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="result-status">
+                      🏆 Completed
+                    </div>
 
-              <p
-                style={{
-                  marginTop: "1rem",
-                  textAlign: "center",
-                  color: "#b7c3d0",
-                }}
-              >
-                {match.day}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+                    <h3>
+                      {player1}
+
+                      <span className="score">
+                        {score1} - {score2}
+                      </span>
+
+                      {player2}
+                    </h3>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        ))
       )}
     </section>
   );
