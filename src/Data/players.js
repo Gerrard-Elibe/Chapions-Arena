@@ -80,9 +80,9 @@ export const players = [
   image: eman,
 },
 {
-  id:12,
-  name: "Moses",
-  tag: "The Prophet",
+  id: 12,
+  name: "Mr Chaos",
+  tag: "The Chaos King",
   image: moses,
 }
 ];
