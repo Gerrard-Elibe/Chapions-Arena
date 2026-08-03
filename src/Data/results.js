@@ -82,4 +82,27 @@ export const results = {
   ["Ezenwa", "Gerrard", 2, 5],
   ["Emmanuel", "Patrick", 2, 5],
 ],
+// =========================
+// MATCHDAY 8
+// =========================
+8: [
+  ["Mr Chaos", "Emmanuel", 2, 3],
+  ["Louis", "Eman", 2, 5],
+  ["Ezenwa", "Stoner", 1, 3],
+  ["Bright", "Samson", 2, 3],
+  ["Offorzor", "Sixtus", 1, 2],
+  ["Patrick", "Gerrard", 2, 4],
+],
+
+// =========================
+// MATCHDAY 9
+// =========================
+9: [
+  ["Eman", "Gerrard", 5, 2],
+  ["Mr Chaos", "Louis", 1, 0],
+  ["Ezenwa", "Patrick", 5, 3],
+  ["Samson", "Sixtus", 2, 3],
+  ["Offorzor", "Emmanuel", 0, 11],
+  ["Bright", "Stoner", 2, 1],
+],
 };

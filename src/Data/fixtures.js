@@ -1,107 +1,107 @@
 export const fixtures = [
 // =========================
-// MATCHDAY 8 (UPCOMING)
+// MATCHDAY 10 (UPCOMING)
 // =========================
 
 {
-  id: 43,
-  matchday: 8,
+  id: 55,
+  matchday: 10,
   day: "Monday",
-  player1: "Mr Chaos",
-  player2: "Emmanuel",
-  status: "Upcoming",
-},
-{
-  id: 44,
-  matchday: 8,
-  day: "Monday",
-  player1: "Louis",
-  player2: "Eman",
-  status: "Upcoming",
-},
-{
-  id: 45,
-  matchday: 8,
-  day: "Monday",
-  player1: "Ezenwa",
-  player2: "Stoner",
-  status: "Upcoming",
-},
-{
-  id: 46,
-  matchday: 8,
-  day: "Tuesday",
-  player1: "Bright",
+  player1: "Emmanuel",
   player2: "Samson",
   status: "Upcoming",
 },
 {
-  id: 47,
-  matchday: 8,
-  day: "Tuesday",
-  player1: "Offorzor",
-  player2: "Sixtus",
-  status: "Upcoming",
-},
-{
-  id: 48,
-  matchday: 8,
-  day: "Tuesday",
-  player1: "Patrick",
-  player2: "Gerrard",
-  status: "Upcoming",
-},
-
-// =========================
-// MATCHDAY 9 (UPCOMING)
-// =========================
-
-{
-  id: 49,
-  matchday: 9,
-  day: "Thursday",
+  id: 56,
+  matchday: 10,
+  day: "Monday",
   player1: "Eman",
-  player2: "Gerrard",
-  status: "Upcoming",
-},
-{
-  id: 50,
-  matchday: 9,
-  day: "Thursday",
-  player1: "Mr Chaos",
-  player2: "Louis",
-  status: "Upcoming",
-},
-{
-  id: 51,
-  matchday: 9,
-  day: "Thursday",
-  player1: "Ezenwa",
   player2: "Patrick",
   status: "Upcoming",
 },
 {
-  id: 52,
-  matchday: 9,
-  day: "Friday",
-  player1: "Samson",
+  id: 57,
+  matchday: 10,
+  day: "Monday",
+  player1: "Gerrard",
   player2: "Sixtus",
   status: "Upcoming",
 },
 {
-  id: 53,
-  matchday: 9,
-  day: "Friday",
+  id: 58,
+  matchday: 10,
+  day: "Tuesday",
+  player1: "Bright",
+  player2: "Mr Chaos",
+  status: "Upcoming",
+},
+{
+  id: 59,
+  matchday: 10,
+  day: "Tuesday",
   player1: "Offorzor",
+  player2: "Stoner",
+  status: "Upcoming",
+},
+{
+  id: 60,
+  matchday: 10,
+  day: "Tuesday",
+  player1: "Ezenwa",
+  player2: "Louis",
+  status: "Upcoming",
+},
+
+// =========================
+// MATCHDAY 11 (UPCOMING)
+// =========================
+
+{
+  id: 61,
+  matchday: 11,
+  day: "Thursday",
+  player1: "Patrick",
+  player2: "Sixtus",
+  status: "Upcoming",
+},
+{
+  id: 62,
+  matchday: 11,
+  day: "Thursday",
+  player1: "Samson",
+  player2: "Offorzor",
+  status: "Upcoming",
+},
+{
+  id: 63,
+  matchday: 11,
+  day: "Thursday",
+  player1: "Ezenwa",
   player2: "Emmanuel",
   status: "Upcoming",
 },
 {
-  id: 54,
-  matchday: 9,
+  id: 64,
+  matchday: 11,
   day: "Friday",
   player1: "Bright",
-  player2: "Stoner",
+  player2: "Eman",
+  status: "Upcoming",
+},
+{
+  id: 65,
+  matchday: 11,
+  day: "Friday",
+  player1: "Gerrard",
+  player2: "Louis",
+  status: "Upcoming",
+},
+{
+  id: 66,
+  matchday: 11,
+  day: "Friday",
+  player1: "Stoner",
+  player2: "Mr Chaos",
   status: "Upcoming",
 },
 ];
