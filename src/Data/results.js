@@ -128,4 +128,29 @@ export const results = {
   ["Gerrard", "Louis", 5, 4],
   ["Stoner", "Mr Chaos", 2, 3],
 ],
+ // =========================
+// MATCHDAY 12
+// =========================
+
+12: [
+  ["Mr Chaos", "Gerrard", 1, 0],
+  ["Louis", "Bright", 1, 4],
+  ["Ezenwa", "Sixtus", 1, 5],
+  ["Emmanuel", "Stoner", 4, 3],
+  ["Offorzor", "Patrick", 1, 6],
+  ["Samson", "Eman", 1, 2],
+],
+
+// =========================
+// MATCHDAY 13
+// =========================
+
+13: [
+  ["Samson", "Gerrard", 1, 3],
+  ["Patrick", "Bright", 2, 6],
+  ["Emmanuel", "Sixtus", 4, 2],
+  ["Louis", "Stoner", 0, 2],
+  ["Offorzor", "Eman", 2, 6],
+  ["Ezenwa", "Mr Chaos", 1, 2],
+],
 };
