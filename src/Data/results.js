@@ -153,4 +153,29 @@ export const results = {
   ["Offorzor", "Eman", 2, 6],
   ["Ezenwa", "Mr Chaos", 1, 2],
 ],
+// =========================
+// MATCHDAY 14
+// =========================
+
+14: [
+  ["Bright", "Gerrard", 3, 0],
+  ["Stoner", "Samson", 5, 4],
+  ["Mr Chaos", "Patrick", 1, 3],
+  ["Eman", "Sixtus", 3, 5],
+  ["Emmanuel", "Louis", 4, 3],
+  ["Offorzor", "Ezenwa", 0, 6],
+],
+
+// =========================
+// MATCHDAY 15
+// =========================
+
+15: [
+  ["Sixtus", "Mr Chaos", 2, 4],
+  ["Gerrard", "Offorzor", 4, 1],
+  ["Stoner", "Patrick", 2, 2],
+  ["Eman", "Ezenwa", 10, 1],
+  ["Emmanuel", "Bright", 5, 5],
+  ["Samson", "Louis", 0, 1],
+],
 };
