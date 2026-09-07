@@ -194,6 +194,6 @@ export const results = {
   ["Mr Chaos", "Samson", 4, 4],
   ["Bright", "Sixtus", 2, 4],
   ["Gerrard", "Ezenwa", 2, 1],
-  ["Patrick", "Emmanuel", 1, 5],
+  ["Patrick", "Emmanuel", 5, 1],
 ],
 };
