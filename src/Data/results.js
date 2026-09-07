@@ -178,4 +178,22 @@ export const results = {
   ["Emmanuel", "Bright", 5, 5],
   ["Samson", "Louis", 0, 1],
 ],
+
+16: [
+  ["Emmanuel", "Gerrard", 6, 3],
+  ["Patrick", "Louis", 0, 3],
+  ["Samson", "Ezenwa", 0, 3],
+  ["Sixtus", "Stoner", 0, 0],
+  ["Offorzor", "Bright", 1, 6],
+  ["Mr Chaos", "Eman", 2, 1],
+],
+
+17: [
+  ["Louis", "Offorzor", 4, 0],
+  ["Stoner", "Eman", 3, 2],
+  ["Mr Chaos", "Samson", 4, 4],
+  ["Bright", "Sixtus", 2, 4],
+  ["Gerrard", "Ezenwa", 2, 1],
+  ["Patrick", "Emmanuel", 1, 5],
+],
 };
