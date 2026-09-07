@@ -185,7 +185,7 @@ export const results = {
   ["Samson", "Ezenwa", 0, 3],
   ["Sixtus", "Stoner", 0, 0],
   ["Offorzor", "Bright", 1, 6],
-  ["Mr Chaos", "Eman", 2, 1],
+  ["Mr Chaos", "Eman", 1, 2],
 ],
 
 17: [
